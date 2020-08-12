@@ -28,6 +28,8 @@ class LoginController: UIViewController{
         navigationItem.title = "Вход"
         self.navigationController?.navigationBar.prefersLargeTitles = false
         
+        print("something")
+        
     }
     
     lazy var enterButton: UIButton = {
@@ -135,6 +137,7 @@ class LoginController: UIViewController{
                 self.view.window?.rootViewController = BaseTabBarController()
                 self.view.window?.makeKeyAndVisible()
             }
+            
         }
     }
 }
