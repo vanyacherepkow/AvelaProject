@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import LBTATools
 
 class NewsDetailCell: UICollectionViewCell {
-    
     
     private let tagId = "tagId"
     let tagNewsController = TagsInNewsController()
@@ -17,8 +17,8 @@ class NewsDetailCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        sourceFavicon.constrainWidth(constant: 20)
-        sourceFavicon.constrainHeight(constant: 20)
+        sourceFavicon.constrainWidth(20)
+        sourceFavicon.constrainHeight(20)
         titleLabel.sizeToFit()
         
         newsImage.contentMode = .scaleAspectFit
@@ -48,13 +48,13 @@ class NewsDetailCell: UICollectionViewCell {
         buttonsSV.spacing = 12
         buttonsSV.distribution = .fillProportionally
         buttonsSV.alignment = .fill
-        buttonsSV.constrainHeight(constant: 50)
+        buttonsSV.constrainHeight(50)
         
         let tagSV = HorizontalStackView(arrangedSubviews: [
             tagsNameLabel,
             tagNewsController.view
         ], spacing: 12)
-        tagSV.constrainHeight(constant: 90)
+        tagSV.constrainHeight(90)
         
         tagsNameLabel.sizeToFit()
         
@@ -98,24 +98,24 @@ class NewsDetailCell: UICollectionViewCell {
     let buttonSepView: UIView = {
         let sepView = UIView()
         sepView.backgroundColor = .darkGray
-        sepView.constrainWidth(constant: 0)
-        sepView.constrainHeight(constant: 1)
+        sepView.constrainWidth(0)
+        sepView.constrainHeight(1)
         return sepView
     }()
     
     let tagUpSV: UIView = {
         let sepView = UIView()
         sepView.backgroundColor = .darkGray
-        sepView.constrainWidth(constant: 0)
-        sepView.constrainHeight(constant: 1)
+        sepView.constrainWidth(0)
+        sepView.constrainHeight(1)
         return sepView
     }()
     
     let tagDownSV: UIView = {
         let sepView = UIView()
         sepView.backgroundColor = .darkGray
-        sepView.constrainWidth(constant: 0)
-        sepView.constrainHeight(constant: 1)
+        sepView.constrainWidth(0)
+        sepView.constrainHeight(1)
         return sepView
     }()
     

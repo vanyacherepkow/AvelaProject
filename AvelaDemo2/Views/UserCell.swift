@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LBTATools
 
 class UserCell: UICollectionViewCell {
     
@@ -15,9 +16,9 @@ class UserCell: UICollectionViewCell {
         
         userImage.image = #imageLiteral(resourceName: "lion")
         
-        currentPasswordField.constrainHeight(constant: 36)
-        newPasswordField.constrainHeight(constant: 36)
-        newPasswordRepeatField.constrainHeight(constant: 36)
+        currentPasswordField.constrainHeight(36)
+        newPasswordField.constrainHeight( 36)
+        newPasswordRepeatField.constrainHeight(36)
         
         changePasswordButton.backgroundColor = #colorLiteral(red: 0.5449770689, green: 0.7717760205, blue: 0.2509875894, alpha: 1)
         changePasswordButton.layer.cornerRadius = 10
@@ -60,8 +61,8 @@ class UserCell: UICollectionViewCell {
         image.layer.cornerRadius = 50
         image.layer.masksToBounds = true
         image.backgroundColor = .red
-        image.constrainWidth(constant: 60)
-        image.constrainHeight(constant: 60)
+        image.constrainWidth(60)
+        image.constrainHeight(60)
         return image
     }()
     

@@ -33,8 +33,8 @@ class NewsCell: UICollectionViewCell {
             }
             if let imageName = news?.file_info_file{
                 if imageName == ""{
-                    newsImageView.constrainWidth(constant: 0)
-                    newsImageView.constrainHeight(constant: 0)
+                    newsImageView.constrainWidth(0)
+                    newsImageView.constrainHeight(0)
                 }else{
                     newsImageView.image = UIImage(named: imageName)
                 }
@@ -42,8 +42,8 @@ class NewsCell: UICollectionViewCell {
             
             if let favicon = news?.source_favicon{
                 if favicon == ""{
-                    sourceFavicon.constrainWidth(constant: 0)
-                    sourceFavicon.constrainHeight(constant: 0)
+                    sourceFavicon.constrainWidth(0)
+                    sourceFavicon.constrainHeight(0)
                 }else{
                     sourceFavicon.sd_setImage(with: URL(string: news.source_favicon ?? ""))
                 }
@@ -82,8 +82,8 @@ class NewsCell: UICollectionViewCell {
         newsImageView.contentMode = .scaleAspectFit
         newsImageView.clipsToBounds = true
         
-        sourceFavicon.constrainWidth(constant: 20)
-        sourceFavicon.constrainHeight(constant: 20)
+        sourceFavicon.constrainWidth(20)
+        sourceFavicon.constrainHeight(20)
         sourceFavicon.contentMode = .scaleAspectFit
         sourceFavicon.clipsToBounds = true
         
