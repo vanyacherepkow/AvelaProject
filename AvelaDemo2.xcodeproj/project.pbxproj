@@ -53,9 +53,6 @@
 		2C22593C2422D4D7007DAAA1 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2C22593E2422D50A007DAAA1 /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		2C234A8D23F47DAD00FB362C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		2C234A982401734F00FB362C /* avela3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = avela3.json; sourceTree = "<group>"; };
-		2C234A992401735000FB362C /* avela.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = avela.json; sourceTree = "<group>"; };
-		2C234A9A2401735000FB362C /* avela2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = avela2.json; sourceTree = "<group>"; };
 		2C234A9C2402BD7F00FB362C /* LatestNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNews.swift; sourceTree = "<group>"; };
 		2C234A9E2403FBFC00FB362C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		2C505CB724E456F400375FC8 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserController.swift; path = /Users/ivan/Desktop/Avela/AvelaDemo2/AvelaDemo2/Controller/UserController.swift; sourceTree = "<absolute>"; };
@@ -182,16 +179,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		2C234A972401733600FB362C /* json */ = {
-			isa = PBXGroup;
-			children = (
-				2C234A992401735000FB362C /* avela.json */,
-				2C234A9A2401735000FB362C /* avela2.json */,
-				2C234A982401734F00FB362C /* avela3.json */,
-			);
-			path = json;
-			sourceTree = "<group>";
-		};
 		2C234A9B2402BD5E00FB362C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +212,6 @@
 			children = (
 				2C8729C623DBA6EF004ED321 /* AppDelegate.swift */,
 				2C1B1EC6245B15B2000C0230 /* Fonts */,
-				2C234A972401733600FB362C /* json */,
 				2C8729C823DBA6EF004ED321 /* SceneDelegate.swift */,
 				2C1B1EA924537198000C0230 /* Api */,
 				2C234A9B2402BD5E00FB362C /* Model */,
