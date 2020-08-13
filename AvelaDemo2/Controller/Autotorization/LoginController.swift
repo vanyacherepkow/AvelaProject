@@ -18,7 +18,8 @@ class LoginController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(UserDefaults.standard.array(forKey: "SavedCookies"))
+        UserDefaults.standard.removeObject(forKey:"SavedCookies")
+        UserDefaults.standard.removeObject(forKey:"savedCookies")
         
         view.backgroundColor = .white
         
@@ -134,9 +135,6 @@ class LoginController: UIViewController{
                 self.errorLabel.text = "Введенные почта или пароль неверные.\n Повторите снова"
             case.success:
                 self.view.window?.rootViewController = BaseTabBarController()
-                
-                UserDefaults.standard.set([email, password], forKey: "SavedCookies")
-                
                 self.view.window?.makeKeyAndVisible()
             }
             

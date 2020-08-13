@@ -161,6 +161,7 @@ class UserController: UIViewController, UIImagePickerControllerDelegate, UINavig
             case.failure:
                 print("Ошибка при выполнении")
             case.success:
+                UserDefaults.standard.removeObject(forKey:"session")
                 let navigation = UINavigationController(rootViewController: LoginController())
                 navigation.title = "Вход"
                 self.view.window?.rootViewController = navigation

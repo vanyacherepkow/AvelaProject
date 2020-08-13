@@ -42,7 +42,7 @@ class Api: NSObject{
         for cookie in cookies {
          cookieArray.append(cookie.properties!)
         }
-        UserDefaults.standard.set(cookieArray, forKey: "savedCookies")
+        UserDefaults.standard.set(cookieArray, forKey: "session")
         UserDefaults.standard.synchronize()
     }
     

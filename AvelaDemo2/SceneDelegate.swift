@@ -19,12 +19,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let login = LoginController()
-            let navigation = UINavigationController(rootViewController: login)
-            window.rootViewController = navigation
             
-            self.window = window
-            window.makeKeyAndVisible()
+            let base = BaseTabBarController()
+            let login = LoginController()
+            
+            if UserDefaults.standard.array(forKey: "session") == nil{
+                let navigation = UINavigationController(rootViewController: login)
+                window.rootViewController = navigation
+                
+                self.window = window
+                window.makeKeyAndVisible()
+            }else{
+                window.rootViewController = base
+                
+                self.window = window
+                window.makeKeyAndVisible()
+            }
         }
     }
     
