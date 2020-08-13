@@ -18,6 +18,8 @@ class LoginController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(UserDefaults.standard.array(forKey: "SavedCookies"))
+        
         view.backgroundColor = .white
         
         setupStack()
@@ -27,9 +29,6 @@ class LoginController: UIViewController{
         
         navigationItem.title = "Вход"
         self.navigationController?.navigationBar.prefersLargeTitles = false
-        
-        print("something")
-        
     }
     
     lazy var enterButton: UIButton = {
@@ -135,9 +134,14 @@ class LoginController: UIViewController{
                 self.errorLabel.text = "Введенные почта или пароль неверные.\n Повторите снова"
             case.success:
                 self.view.window?.rootViewController = BaseTabBarController()
+                
+                UserDefaults.standard.set([email, password], forKey: "SavedCookies")
+                
                 self.view.window?.makeKeyAndVisible()
             }
             
         }
+        
     }
+    
 }

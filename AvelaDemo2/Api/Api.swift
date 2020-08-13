@@ -26,8 +26,24 @@ class Api: NSObject{
                 print(err)
             }else{
                 completion(.success(dataResponse.data ?? Data()))
+                
+                Alamofire.request(url).responseJSON { response in
+                    self.saveCookies(response: dataResponse)
+                }
             }
         }
+    }
+    
+    func saveCookies(response: DataResponse<Data>) {
+        let headerFields = response.response?.allHeaderFields as! [String: String]
+        let url = response.response?.url
+        let cookies = HTTPCookie.cookies(withResponseHeaderFields: headerFields, for: url!)
+        var cookieArray = [[HTTPCookiePropertyKey: Any]]()
+        for cookie in cookies {
+         cookieArray.append(cookie.properties!)
+        }
+        UserDefaults.standard.set(cookieArray, forKey: "savedCookies")
+        UserDefaults.standard.synchronize()
     }
     
     func logout(completion: @escaping (Result<Data>) -> ()){
