@@ -18,9 +18,6 @@ class LoginController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UserDefaults.standard.removeObject(forKey:"SavedCookies")
-        UserDefaults.standard.removeObject(forKey:"savedCookies")
-        
         view.backgroundColor = .white
         
         setupStack()
@@ -139,7 +136,5 @@ class LoginController: UIViewController{
             }
             
         }
-        
     }
-    
 }
